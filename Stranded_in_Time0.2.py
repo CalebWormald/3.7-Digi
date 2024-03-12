@@ -84,23 +84,9 @@ def start():
     pos = 6
     #reapeating quesiton and moving
     while game:
-       direction = input("You can go {}. \nWhich direction would you like to go? ".format(loc_list[pos]["direction"])).upper()
-       if loc_list[pos]["direction"] != "":
-           if player.can_move(direction):
-               player.move(direction)
-           else:
-               print("Choose a different direction.")
-       else:
-           print("No valid direction in this location.")
-
-
-    while game:
         direction = input("    You can go {}. \n Which direction would you like to go? ".format(loc_list[pos]["direction"])).upper()
         #call can_move method
         if can_move(pos, direction) == True:
             pos = move(pos, direction)
         else:
             print("    Choose a different direction.")
-
-
-   
